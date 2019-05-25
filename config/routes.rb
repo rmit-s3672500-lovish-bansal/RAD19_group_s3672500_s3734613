@@ -1,13 +1,15 @@
 Rails.application.routes.draw do
   
+  
+ root 'home#index'
   get 'register', to:'register#index'
-  # get 'course', to:'course#index'
-  # get 'courses', to:'course#show'
   get 'contact', to:'contact_us#index'  
   get 'category',to:'category#index'
-  root 'home#index'
   get 'signup', to: 'users#new'
   post 'signup',  to: 'users#create'
+  get 'login',   to: 'sessions#new'
+  post 'login',   to: 'sessions#create'
+  delete 'logout',  to: 'sessions#destroy'
   resources :users
   resources :course
   
