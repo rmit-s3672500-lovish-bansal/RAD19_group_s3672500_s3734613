@@ -1,0 +1,244 @@
+// Place all the styles related to the home controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+body, .container{
+	padding:0;
+	margin-bottom: 10px;
+}
+body a:link, a:hover, a:visited, a:active{
+	color: white;
+	text-decoration: none;
+}
+
+.main-wrap{
+	padding:20px 0;
+}
+
+.heading{
+	width: 130px;
+	height:35px;
+	background-color: #5cd1ef;
+	padding-top: 7px;
+	color: white;
+	font-weight: 700;
+	font-size: 14px;
+	border-radius: 4px;
+}
+.nav .dropdown .btn{
+	margin-left: 20px;
+	background-color: #5cd1ef;
+	border:0;
+}
+.nav .dropdown .btn:hover{
+	background-color: #2693af;
+	border:0;
+	outline: none;
+}
+.nav .dropdown .btn:focus{
+	background-color: #2693af;
+	border:0;
+	outline: none;
+}
+
+/*start of Home page*/
+.content {
+	font-family: 'Montserrat', sans-serif;
+	margin-top: 5px;
+	height: 250px;
+	background-color: #e5e6e8;
+	text-align: center;
+	padding-top: 70px;
+	border-radius: 3px;
+}
+
+.content p{
+	font-size: 13px;
+}
+
+.content button{
+	color: white;
+	font-size: 15px;
+	background-color: #ff0a0a;
+	border:0;
+}
+
+.section {
+	width: 560px;
+	margin-top: 50px; 
+}
+
+.section p{
+	font-size: 15px;
+	color: #565454;
+	font-weight: 600;
+}
+
+.section button{
+	height: 30px;
+	padding-left: 8px;
+	padding-top: 2px;
+	font-size: 15px;
+	background-color: #02cc2a; /* 02cc2a */
+	border:0;
+	text-align: center;
+}
+
+.section .info{
+	width: 280px;
+	float: left;
+
+}
+
+.footer {
+	font-family: 'Montserrat', sans-serif;
+	margin-top: 40px;
+	width: 100%;
+	height: 500px;
+	background-color: #e5e6e8;
+	padding-top: 35px;
+	padding-left: 20px;
+	border-radius: 3px;
+	float: left;
+}
+
+
+.md-form input{
+	width: 250;
+	background-color: #e5e6e8;
+	margin-top: 20px;
+}
+
+.md-form input .message{
+	height: 300px;
+}
+
+.contact{
+	width: 20%;
+	float: left;
+	margin-left: 15px;
+	margin-right: 39px;
+}
+
+#id{
+	background-color : "#fff";
+	font-color : "#000";
+}
+
+.contact p {
+	margin-top: 10px;
+	color: #39393a;
+	font-size: 15px;
+}
+
+.footer .btn{
+	margin-top: 8px;
+}
+
+.footer .detail{
+	margin-top: 100px;
+}
+
+/*end of Home page*/
+
+/*start of Register page*/
+
+.reg h2{
+	width: 100%;
+	height: auto;
+	text-align: center;
+	margin-top: 20px;
+}
+
+.reg .signup{
+	width: 71%;
+	margin-left: 15%;
+}
+.reg ul{
+	margin-top: 8px;
+}
+
+.regform {
+	width: 71%;
+	background-color: #e0e0e0;
+	margin-left: 15%;
+	padding: 20px;
+	border-radius: 4px;
+}
+
+.regform button{
+	background-color: #00AD20;
+}
+
+/*start of All Courses page*/
+
+.main-wrap h3{
+	margin-top: 20px;
+}
+
+.body-content .container a:link{
+	color: black;
+}
+
+.main-wrap .tab-content .tab-pane .image{
+	font-family: 'Roboto', sans-serif;
+	height: 130px;
+	text-align: center;
+}
+.main-wrap .tab-content .tab-pane .image img{
+	max-height: 130px;
+	width: 80%;
+}
+.main-wrap .tab-content .tab-pane .text p {
+	font-weight: bold;
+	font-size: 13px;
+}
+.main-wrap .tab-content .tab-pane .data{
+	font-family: 'Roboto', sans-serif;
+	height: 210px;
+	background-color: #d8d8d887;
+	border-radius: 3px;
+	padding: 20px 15px;
+}
+.main-wrap .tab-content .tab-pane .data h5{
+	color: #0b64b1;
+	font-weight: bold;
+	font-size: 18px;
+}
+.main-wrap .tab-content .tab-pane .data p{
+	font-size: 13px;
+	font-weight: bold;
+	margin-bottom: 10px;
+}
+.main-wrap .tab-content .tab-pane .data .reaction{
+	width:100px;
+	height: 35px;	
+	display: inline-block;
+	padding-top: 10px;
+}
+.main-wrap .tab-content .tab-pane .data .reaction .like,
+.main-wrap .tab-content .tab-pane .data .reaction .dislike{
+	color: #0b64b1;
+	font-size: 12px;
+	width: 50%;
+	float: left;
+}
+.main-wrap .tab-content .tab-pane .wrap{
+	width:200px;
+	height:200px;
+	text-align: center;
+	margin-bottom: 20px;
+}
+.main-wrap .tab-content .tab-pane .wrap img{
+	max-width:100%;
+	max-height:100%;
+}
+.main-wrap .tab-content .tab-pane .wrap p{
+	font-size: 13px;
+	font-weight: bold;
+}
+
+/*end of All Courses page*/
