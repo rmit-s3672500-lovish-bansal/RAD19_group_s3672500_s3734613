@@ -1,0 +1,12 @@
+<% if @course.errors.any? %>
+  <div id="error-wrapper">
+    <div class="alert alert-danger">
+      Please correct the following errors.
+    </div>
+    <ul>
+      <% @course.errors.full_messages.each do |msg| %>
+        <li class="text-danger"><%= msg %></li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>

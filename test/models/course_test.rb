@@ -2,6 +2,7 @@ require 'test_helper'
 
 class CourseTest < ActiveSupport::TestCase
  def setup
+   @user = users(:michael)
     @Course = Course.new(name: "Example User", prerequisite: "Example course", Description: " Some Description")
   end
 

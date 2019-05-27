@@ -105,6 +105,22 @@ body a:link, a:hover, a:visited, a:active{
 	float: left;
 }
 
+.pa-10 {
+  padding: 10px;
+}
+
+.field_with_errors {
+  .form-control {
+    border: 1px solid red;
+  }
+}
+
+.jumbotron {
+  &.small {
+    padding: 15px;
+  }
+}
+
 
 .md-form input{
 	width: 250;

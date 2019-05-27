@@ -1,0 +1,11 @@
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <h2>Create Category</h2>
+    <%= form_for(@category) do |f|%>
+      <%= render 'shared/category_error'%>
+      <%= f.label :title , "Category Name"%>
+      <%= f.text_field :title, class: 'form-control' %>
+        <%= f.submit "Create Category", class: "btn btn-success" %>
+    <% end %>
+  </div>
+</div>

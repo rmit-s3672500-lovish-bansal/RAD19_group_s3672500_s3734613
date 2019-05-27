@@ -1,0 +1,61 @@
+<h1 class="text-center">
+  Courses in <%= @location.venue %>
+</h1>
+<div class="container">
+  <% flash.each do |key, value| %>
+    <%= content_tag(:div, class: "alert alert-#{key} alert-dismissable") do %>
+      <%= value %>
+      <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+    <% end %>
+  <% end %>
+  <!-- Nav tabs -->
+  <ul class="nav nav-tabs" role="tablist">
+    <li role="presentation" class="active"><a href="#courses" aria-controls="home" role="tab" data-toggle="tab">Courses</a></li>
+    <li role="presentation" class = "active"><a href="#coordinators" aria-controls="settings" role="tab" data-toggle="tab">Coordinators</a></li>
+  </ul>
+  <!-- Tab panes -->
+  <div class="tab-content">
+    <div role="tabpanel" class="tab-pane active" id="courses">
+      <% @location.course.each do |loc| %>
+        <div class="row">
+          <div class="col-md-3">
+            <div class="thumbnail">
+              <%= link_to gravatar_for(loc.user, size: 50), loc.user %>
+              <div class="caption">
+                <h5>Coordinator Name: <%= loc.user.name %></h5>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-5 jumbotron small">
+            <% if logged_in? %>
+              <% if current_user.email == loc.user.email %>
+              <div class="text-right">
+                <a class="btn btn-link" href="/course/edit/<%= loc.id %>">
+                  <i class="glyphicon glyphicon-pencil"></i> Edit
+                </a>
+              </div>
+              <% end %>
+            <% end %>
+            <h3><%= loc.name %></h3>
+            <h5>Prerequisite: <%= loc.prerequisite%></h5>
+            <h5>
+              <span>Categories: </span>
+              <% loc.category.each do |cat| %>
+                    <%= cat.title %>
+              <% end %>
+            </h5>
+            <h5>
+              <span>Locations: </span>
+              <% loc.location.each do |loc| %>
+                    <%= loc.venue %>
+              <% end %>
+            </h5>
+            <h5>Created <%= (DateTime.now - loc.created_at.to_date).to_i %> days ago</h5>
+          </div>
+        </div>
+      <% end %>
+    </div>
+    <div role="tabpanel" class="tab-pane" id="coordinators">
+    </div>
+  </div>
+</div>

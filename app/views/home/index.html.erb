@@ -6,64 +6,8 @@
 
 	<meta charset="utf-8">
   	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	
-	<!--<link rel="stylesheet" type="text/css" href="css/home.scss">-->
-	<!--<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">-->
-	<!--<link rel="stylesheet" type="text/css" href="font-awesome/css/all.css">-->
-	<!--<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">-->
-	<!-- <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet"> -->
 </head>
 <body>
-
-	<!-- This part is for Header Buttons -->
-	<!--<div class="main-wrap">-->
-	<!--	<div class="container">-->
-	<!--		<div class="row">-->
-	<!--			<div class="col-md-6">-->
-	<!--				<div class="heading">-->
-	<!--					<a href="All Courses.html"><p class="text-center">YOURCOURSES</p></a>-->
-	<!--				</div>-->
-	<!--			</div>-->
-	<!--			<div class="col-md-6">-->
-	<!--				<div class="nav float-md-right">-->
-	<!--					<div class="dropdown">-->
-	<!--						<button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">-->
-	<!--							<span style="font-size: 15px;">-->
-	<!--							<i class="fas fa-crosshairs"></i>-->
-	<!--						</span>-->
-	<!--						Category-->
-	<!--						</button>-->
-	<!--						<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">-->
-	<!--						    <a class="dropdown-item" href="#">Web Development</a>-->
-	<!--						    <a class="dropdown-item" href="#">Java</a>-->
-	<!--						    <a class="dropdown-item" href="#">Full Stack Dev</a>-->
-	<!--						    <a class="dropdown-item" href="#">iOS Engineering</a>-->
-	<!--						</div>-->
-	<!--					</div>-->
-	<!--					<div class="dropdown">-->
-	<!--						<button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">-->
-	<!--						<span style="font-size: 15px;">-->
-	<!--							<i class="fas fa-location-arrow"></i>-->
-	<!--						</span>-->
-	<!--						Locations-->
-	<!--						</button>-->
-	<!--						<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">-->
-	<!--						    <a class="dropdown-item" href="#">14.10.31</a>-->
-	<!--						    <a class="dropdown-item" href="#">14.08.26</a>-->
-	<!--						    <a class="dropdown-item" href="#">14.10.20</a>-->
-	<!--						</div>-->
-	<!--					</div>-->
-	<!--					<div class="dropdown">-->
-	<!--						<button class="btn btn-secondary" type="button">-->
-	<!--						<span style="font-size: 15px;">-->
-	<!--							<i class="far fa-address-card"></i>-->
-	<!--						</span>	-->
-	<!--						 Log in-->
-	<!--						</button>-->
-	<!--					</div>-->
-	<!--				</div>-->
-	<!--			</div>-->
-	<!--		</div>-->
 
 			<!-- This part is for Welcome Content -->
 			<div class="content">
@@ -74,8 +18,7 @@
 				<button class="btn btn-secondary" type="button">
 							<span style="font-size: 13px;">
 								<i class="fas fa-cog"></i>
-							</span>	
-							 Sign up now
+							</span>	<%= link_to "Sign up ", signup_path,{ :style=>"color:white"} %>
 							</button></a>			
 			</div>
 
@@ -89,7 +32,7 @@
 							<span style="font-size: 13px;">
 								<i class="fas fa-book"></i>
 							</span>	
-							Browse all courses
+							<%= link_to "Browse all courses", courses_path %>
 							</button>
 			</div>
 			<div class="info">
@@ -100,7 +43,7 @@
 							<span style="font-size: 13px;">
 								<i class="far fa-address-card"></i>
 							</span>	
-							Log in to your account
+							<%= link_to "Log in to your account", login_path %>
 							</button>
 			</div>
 		</div>

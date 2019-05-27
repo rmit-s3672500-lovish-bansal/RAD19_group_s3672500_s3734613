@@ -1,11 +1,49 @@
 <% provide(:title, @user.name) %>
-<div class="row">
-  <aside class="col-md-4">
-    <section class="user_info">
-      <h1>
+    <% @user.course.each do | course |%>
+  <div class="media">
+    <div class="media-left media-middle">
         <%= gravatar_for @user %>
-        <%= @user.name %>
-      </h1>
-    </section>
-  </aside>
+        <h3 class="panel-title">Coodinator Name: <%= @user.name %></h3>
+    </div>
+    <div class="media-body">
+       <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title"><%= course.name %></h3>
+            </div>
+            <div class="panel-body">
+                <b>Category:</b> 
+                 <% course.category.each do |cat| %>
+                    <%= cat.title %>
+                <% end %>
+                <br>
+
+                 <b>Location:</b> 
+                 <% course.location.each do |loc| %>
+                    <%= loc.venue %>
+                <% end %>
+                <br>
+                <b>Created:</b> <%= time_ago_in_words(course.created_at) %> ago
+                <br>
+                <b>Prerequisite:</b> <%= course.prerequisite %>
+                <br>
+                <% if logged_in? %>
+                    <div class="button">
+                        <%= link_to '' do %>
+                            <%= fa_icon "thumbs-o-up" %> <%#= course.votes.count %>
+                        <% end %>
+                        <%= link_to '' do %>
+                            <%= fa_icon "thumbs-o-down" %>1
+                        <% end %>
+                    </div>
+                <% else %>
+                    <div class="button">
+                        <%= fa_icon "thumbs-o-up" %> <%#= course.votes.count %>
+                        <%= fa_icon "thumbs-o-down" %> 1
+                    </div>
+                <% end %>
+                
+            </div>
+        </div>
+    </div>
 </div>
+<%end%>
