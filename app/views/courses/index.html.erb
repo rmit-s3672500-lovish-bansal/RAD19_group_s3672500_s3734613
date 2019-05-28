@@ -1,17 +1,18 @@
 <h1 class="text-center">
   All Courses
 </h1>
-<div class="container">
-  <% flash.each do |key, value| %>
-    <%= content_tag(:div, class: "alert alert-#{key} alert-dismissable") do %>
-      <%= value %>
+<div id="content">
+  <div class="container">
+    <% flash.each do |key, value| %>
+      <%= content_tag(:div, class: "alert alert-#{key} alert-dismissable") do %>
+        <%= value %>
       <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
     <% end %>
   <% end %>
   <!-- Nav tabs -->
   <ul class="nav nav-tabs" role="tablist">
-    <li role="presentation" class="active"><a href="#courses" aria-controls="home" role="tab" data-toggle="tab">Courses</a></li>
-    <li role="presentation" class="active"><a href="#coordinators" aria-controls="settings" role="tab" data-toggle="tab" >Coordinators</a></li>
+    <li role="presentation" class="active"><%= link_to "Course", courses_path, remote: true %></li>
+    <li role="presentation" class="active"><%= link_to "Coordinators", coordinator_path, remote: true %></li>
   </ul>
   <!-- Tab panes -->
   <div class="tab-content">
@@ -55,7 +56,6 @@
         </div>
       <% end %>
     </div>
-    <div role="tabpanel" class="tab-pane" id="coordinators">
-    </div>
   </div>
+</div>
 </div>

@@ -20,9 +20,9 @@
         <div class="row">
           <div class="col-md-3">
             <div class="thumbnail">
-              <%= link_to gravatar_for(loc.user, size: 50), loc.user %>
+              <%= link_to gravatar_for(loc.user, size: 150), loc.user %>
               <div class="caption">
-                <h5>Coordinator Name: <%= loc.user.name %></h5>
+                <h3>Coordinator Name: <%= loc.user.name %></h3>
               </div>
             </div>
           </div>
@@ -55,7 +55,6 @@
         </div>
       <% end %>
     </div>
-    <div role="tabpanel" class="tab-pane" id="coordinators">
     </div>
   </div>
 </div>

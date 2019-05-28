@@ -1,6 +1,10 @@
 Rails.application.routes.draw do
   
   
+  get 'errors/not_found'
+
+  get 'errors/internal_server_error'
+
  root 'home#index'
   get 'register', to:'register#index'
   get 'contact', to:'contact_us#index'  
@@ -13,6 +17,11 @@ Rails.application.routes.draw do
   get 'login',   to: 'sessions#new'
   post 'login',   to: 'sessions#create'
   delete 'logout',  to: 'sessions#destroy'
+  
+  get 'coordinator', to: 'coordinator#show'
+  
+  match "/404", :to => "errors#not_found", :via => :all
+match "/500", :to => "errors#internal_server_error", :via => :all
   
   resources :users
   resources :courses
